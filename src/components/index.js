@@ -12,6 +12,9 @@ import PostForm from "./post-form/PostForm";
 import PostCard from "./PostCard";
 import AuthLayout from "./AuthLayout";
 import Input from "./Input";
+import ApodFooter from "./Apod_Footer";
+import ApodMain from "./Apod_Main";
+import ApodSideBar from "./Apod_Sidebar";
 export {
     Header,
     Footer,
@@ -27,4 +30,7 @@ export {
     AuthLayout, 
     Input,
     Select,
+    ApodFooter,
+    ApodMain,
+    ApodSideBar,
 }

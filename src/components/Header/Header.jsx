@@ -24,6 +24,11 @@ function Header() {
       slug: "/signup",
       active: !authStatus,
   },
+   {
+    name: "APOD", 
+    slug: "/apod",
+    active: authStatus, 
+   },
   {
       name: "All Posts",
       slug: "/all-posts",

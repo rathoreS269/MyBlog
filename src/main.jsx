@@ -8,7 +8,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import { AuthLayout, Login } from './components/index.js'
 
-
+import Apod from "./pages/Apod.jsx"
 import AddPost from "./pages/AddPost";
 import Signup from './pages/Signup'
 import EditPost from "./pages/EditPost";
@@ -41,6 +41,16 @@ const router = createBrowserRouter([
                     <Signup />
                 </AuthLayout>
             ),
+        },
+        {
+           path: "/apod",
+           element:(
+            <AuthLayout authentication>
+            {" "}
+            <Apod
+             />
+            </AuthLayout>
+           ),
         },
         {
             path: "/all-posts",

@@ -5,7 +5,7 @@ import './App.css'
 import authService from "./appwrite/auth"
 import {login, logout} from "./store/authSlice"
 import { Footer, Header } from './components'
-import { Outlet } from 'react-router-dom'
+import { Outlet , useLocation} from 'react-router-dom'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -22,7 +22,9 @@ function App() {
     })
     .finally(() => setLoading(false))
   }, [])
-  
+   
+  const noFooterRoutes = ['/apod',]
+  const shouldHideFooter = noFooterRoutes.includes(location.pathname)
   return !loading ? (
     <div className='min-h-screen w -full flex flex-wrap content-between bg-gray-400'>
     <div className='w-full block'>
@@ -30,7 +32,7 @@ function App() {
         <main>
         <Outlet />
         </main>
-        <Footer />
+        {!shouldHideFooter && <Footer />}
       </div>
     </div>
   ) : null
