@@ -19,9 +19,10 @@ export default function PostForm({ post }) {
     const userData = useSelector((state) => state.auth.userData);
 
     const submit = async (data) => {
+        console.log("Submitting form with data:", data);
         if (post) {
             const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
-
+            console.log("File uploaded:", file);
             if (file) {
                 appwriteService.deleteFile(post.featuredImage);
             }
@@ -30,7 +31,7 @@ export default function PostForm({ post }) {
                 ...data,
                 featuredImage: file ? file.$id : undefined,
             });
-
+            console.log("Post updated:", dbPost);
             if (dbPost) {
                 navigate(`/post/${dbPost.$id}`);
             }
@@ -41,7 +42,8 @@ export default function PostForm({ post }) {
                 const fileId = file.$id;
                 data.featuredImage = fileId;
                 const dbPost = await appwriteService.createPost({ ...data, userId: userData.$id });
-
+                  
+                console.log("Post created:", dbPost);
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`);
                 }
@@ -113,7 +115,7 @@ export default function PostForm({ post }) {
                     className="mb-4"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full hover:bg-slate-500">
                     {post ? "Update" : "Submit"}
                 </Button>
             </div>

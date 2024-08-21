@@ -17,7 +17,11 @@ export default function Post() {
     useEffect(() => {
         if (slug) {
             appwriteService.getPost(slug).then((post) => {
-                if (post) setPost(post);
+                if (post) {
+                setPost(post)
+                 
+                }
+                
                 else navigate("/");
             });
         } else navigate("/");

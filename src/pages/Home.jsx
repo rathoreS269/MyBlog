@@ -17,16 +17,17 @@ function Home() {
       
     if (posts.length === 0) {
         return (
-            <div className="w-full py-8 mt-4 text-center">
-                <Container>
-                    <div className="flex flex-wrap">
-                        <div className="p-2 w-full">
-                            <h1  className="text-xl font-bold text-black text-center animate-compress-expand">
-                               Login to read post
-                            </h1>
-                        </div>
-                    </div>
-                </Container>
+            <div className="w-full h-screen flex items-center justify-center bg-gradient-to-br from-gray-200 via-gray-400 to-black">
+                <div className="text-center text-white">
+                <img 
+                        src="https://cdn.dribbble.com/userupload/12455326/file/original-245417398f32b2f6d9bcd5919f807990.jpg?resize=400x300&vertical=center" 
+                        alt="Space Logo" 
+                        className="w-18 h-16 mx-auto mb-4 rounded-xl"
+                    />
+                    <h1 className="text-5xl font-bold text-black" style={{ fontFamily: 'Cursive, "Brush Script MT", sans-serif' }}>
+                        Hi Cosmic Enthusiasts</h1>
+                    <h2 className=" my-2 text-2xl font-semibold animate-pulse">Login to read post</h2>
+                </div>
             </div>
         )
     }
