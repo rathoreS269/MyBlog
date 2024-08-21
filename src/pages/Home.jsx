@@ -26,7 +26,7 @@ function Home() {
                     />
                     <h1 className="text-5xl font-bold text-black" style={{ fontFamily: 'Cursive, "Brush Script MT", sans-serif' }}>
                         Hi Cosmic Enthusiasts</h1>
-                    <h2 className=" my-2 text-2xl font-semibold animate-pulse">Login to read post</h2>
+                    <h2 className=" my-2 text-2xl font-semibold animate-pulse">Login to read & create posts</h2>
                 </div>
             </div>
         )
