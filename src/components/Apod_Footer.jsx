@@ -17,5 +17,3 @@ export default function ApodFooter(props) {
 }
 
 
-// niche div : className="absolute inset-0 z-[-1] bg-gradient-to-t from-[#ebeefc] to-transparent"
-//upar div :className="fixed bottom-0 left-0 w-full flex items-center justify-between gap-4 p-4" 
