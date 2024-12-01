@@ -9,6 +9,7 @@ import Home from './pages/Home.jsx'
 import { AuthLayout, Login } from './components/index.js'
 
 import Apod from "./pages/Apod.jsx"
+import Chatbot from './pages/Chatbot'
 import AddPost from "./pages/AddPost";
 import Signup from './pages/Signup'
 import EditPost from "./pages/EditPost";
@@ -52,6 +53,16 @@ const router = createBrowserRouter([
             </AuthLayout>
            ),
         },
+        {
+            path: "/chatbot",
+            element:(
+             <AuthLayout authentication>
+             {" "}
+             <Chatbot
+              />
+             </AuthLayout>
+            ),
+         },
         {
             path: "/all-posts",
             element: (

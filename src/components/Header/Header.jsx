@@ -29,6 +29,11 @@ function Header() {
     slug: "/apod",
     active: authStatus, 
    },
+   {
+    name: "Ask Me", 
+    slug: "/chatbot",
+    active: authStatus, 
+   },
   {
       name: "All Posts",
       slug: "/all-posts",

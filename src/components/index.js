@@ -15,6 +15,7 @@ import Input from "./Input";
 import ApodFooter from "./Apod_Footer";
 import ApodMain from "./Apod_Main";
 import ApodSideBar from "./Apod_Sidebar";
+import ChatBot from "./ChatBot";
 export {
     Header,
     Footer,
@@ -33,4 +34,5 @@ export {
     ApodFooter,
     ApodMain,
     ApodSideBar,
+    ChatBot
 }
